@@ -26,7 +26,8 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <100>;
+    tapping-term-ms = <200>;
+    retro-tap;
 };
 
 / {
@@ -63,6 +64,18 @@
         };
     };
 
+    behaviors {
+        fast_lt: fast_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FAST_LT";
+            bindings = <&lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <100>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -85,10 +98,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q  &kp W  &kp F             &kp P         &kp G          &kp J        &kp L          &kp U              &kp Y    &kp SEMI
-         &kp A  &kp R  &mt LEFT_SHIFT S  &kp T         &kp D          &kp H        &lt 4 N        &mt RIGHT_SHIFT E  &kp I    &kp O
-&kp TAB  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp K        &kp M          &kp COMMA          &kp DOT  &kp FSLH  &kp LEFT_GUI
-                       &kp BACKSPACE     &lt 1 ESCAPE  &lt 3 ENTER    &lt 2 SPACE  &kp RIGHT_ALT  &kp RIGHT_CONTROL
+         &kp Q  &kp W  &kp F             &kp P         &kp G          &kp J             &kp L          &kp U              &kp Y    &kp SEMI
+         &kp A  &kp R  &mt LEFT_SHIFT S  &kp T         &kp D          &kp H             &lt 4 N        &mt RIGHT_SHIFT E  &kp I    &kp O
+&kp TAB  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp K             &kp M          &kp COMMA          &kp DOT  &kp FSLH  &kp LEFT_GUI
+                       &kp BACKSPACE     &lt 1 ESCAPE  &lt 3 ENTER    &fast_lt 2 SPACE  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
         };
 
