@@ -87,7 +87,7 @@
             bindings = <
          &kp Q  &kp W  &kp F             &kp P         &kp G          &kp J        &kp L          &kp U              &kp Y    &kp SEMI
          &kp A  &kp R  &mt LEFT_SHIFT S  &kp T         &kp D          &kp H        &lt 4 N        &mt RIGHT_SHIFT E  &kp I    &kp O
-&kp TAB  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp K        &kp M          &kp COMMA          &kp DOT  &kp FSLH  &kp RIGHT_GUI
+&kp TAB  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp K        &kp M          &kp COMMA          &kp DOT  &kp FSLH  &kp LEFT_GUI
                        &kp BACKSPACE     &lt 1 ESCAPE  &lt 3 ENTER    &lt 2 SPACE  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
         };
@@ -138,8 +138,8 @@
 
             bindings = <
           &kp TILDE      &trans          &kp UP_ARROW    &trans     &trans    &kp PLUS         &kp DEL           &kp LEFT_BRACE     &kp RIGHT_BRACE    &trans
-          &kp GRAVE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans    &kp KP_SUBTRACT  &kp UNDER         &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp KP_EQUAL
-&kp PIPE  &kp BACKSLASH  &trans          &trans          &trans     &trans    &trans           &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &trans             &trans        &trans
+          &kp GRAVE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans    &kp KP_SUBTRACT  &kp UNDER         &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp EQUAL
+&kp PIPE  &kp BACKSLASH  &trans          &trans          &trans     &trans    &trans           &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &trans             &trans     &trans
                                          &trans          &trans     &trans    &trans           &trans            &trans
             >;
         };
